@@ -23,5 +23,19 @@ def dashboard(): # função que gerencia rota deve ser única
     """ Painel de Vendas"""
     #  if 'user' not in session:  # garante autenticação
     #       return redirect(url_for("auth.login"))
+    vendas: list = [
+        {"mes":"Janeiro", "total": 139519.19 }, 
+        {"mes":"Fevereiro", "total": 15985.50},
+        {"mes":"Março", "total": 11899.45},
+        {"mes":"Abril", "total": 8647.90},
+        {"mes":"Maio", "total": 12988.59},
+        {"mes":"Junho", "total": 7546.58},
+        {"mes":"Julho", "total": 9887.78},
+        {"mes":"Agosto", "total": 11875.68},
+        {"mes":"Setembro", "total": 12843.77},
+        {"mes":"Outubro", "total": 13847.54},
+        {"mes":"Novembro", "total": 10980.63},
+        {"mes":"Dezembro", "total": 15983.75},
+    ]#fim da lista de vendas
     
-    return render_template("dashboard/index.html", title="Painel de Vendas") # Renderiza um template
+    return render_template("dashboard/index.html", title="Painel de Vendas", vendas=vendas) # Renderiza um template
