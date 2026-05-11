@@ -23,6 +23,9 @@ def dashboard(): # função que gerencia rota deve ser única
     """ Painel de Vendas"""
     #  if 'user' not in session:  # garante autenticação
     #       return redirect(url_for("auth.login"))
+    import locale 
+    #Define a localização para portugues brasileiro 
+    locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
     vendas: list = [
         {"mes":"Janeiro", "total": 139519.19 }, 
         {"mes":"Fevereiro", "total": 15985.50},
@@ -38,4 +41,4 @@ def dashboard(): # função que gerencia rota deve ser única
         {"mes":"Dezembro", "total": 15983.75},
     ]#fim da lista de vendas
     
-    return render_template("dashboard/index.html", title="Painel de Vendas", vendas=vendas) # Renderiza um template
+    return render_template("dashboard/index.html", title="Painel de Vendas", vendas=vendas, locale=locale) # Renderiza um template
