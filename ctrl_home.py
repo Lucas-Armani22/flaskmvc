@@ -27,7 +27,7 @@ def dashboard(): # função que gerencia rota deve ser única
     #Define a localização para portugues brasileiro 
     locale.setlocale(locale.LC_ALL, 'pt_BR.UTF-8')
     vendas: list = [
-        {"mes":"Janeiro", "total": 139519.19 }, 
+        {"mes":"Janeiro", "total": 13519.19 }, 
         {"mes":"Fevereiro", "total": 15985.50},
         {"mes":"Março", "total": 11899.45},
         {"mes":"Abril", "total": 8647.90},
